@@ -10,6 +10,7 @@ import json
 
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+OpenAI.api_key = os.getenv("OPENAI_API_KEY")
 
 if 'score_history' not in st.session_state:
     st.session_state.score_history = []
